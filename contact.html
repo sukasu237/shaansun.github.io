@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Contact — Shaansun Technologies</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html"><img src="images/logo-placeholder.png" alt="Shaansun" class="logo"> Shaansun Technologies</a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="solutions.html">Solutions</a>
+        <a href="courses.html">Courses</a>
+        <a href="contact.html" class="btn">Contact</a>
+      </nav>
+      <button class="hamburger" id="hamburger5" aria-label="Menu">☰</button>
+    </div>
+  </header>
+
+  <main class="container contact-page">
+    <section class="contact-hero" data-animate>
+      <h1>Contact Us</h1>
+      <p>Questions about courses, corporate bookings or custom training? Reach out.</p>
+    </section>
+
+    <section class="contact-grid">
+      <div class="contact-info card" data-animate>
+        <h3>Visit Us</h3>
+        <p>Shaansun Technologies<br>#237, 8th Cross Road, Opp. Vijaya Bank<br>Yelahanka New Town, Bangalore - 560064</p>
+        <p>Email: shshshs237@shaansun.com</p>
+        <p>Phone: +91-XXXXXXXXXX</p>
+      </div>
+
+      <!-- IMPORTANT: Replace 'yourformid' below with your Formspree form ID after you create a form at https://formspree.io -->
+      <form class="contact-form card" action="https://formspree.io/f/yourformid" method="POST" data-animate>
+        <label>
+          <span>Name</span>
+          <input type="text" name="name" required>
+        </label>
+        <label>
+          <span>Email</span>
+          <input type="email" name="_replyto" required>
+        </label>
+        <label>
+          <span>Message</span>
+          <textarea name="message" rows="6" required></textarea>
+        </label>
+        <!-- Optional: pass a hidden recipient field or tags if you set them up in Formspree -->
+        <input type="hidden" name="_subject" value="New contact from shaansun.com">
+        <button type="submit" class="btn btn-primary">Send Message</button>
+      </form>
+    </section>
+
+    <section class="map" data-animate>
+      <!-- Optional: Add your Google Maps iframe here -->
+      <p>Map placeholder — replace with Google Maps iframe for exact location.</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">© <span id="year5"></span> Shaansun Technologies</div>
+  </footer>
+
+  <script src="assets/script.js"></script>
+</body>
+</html>
