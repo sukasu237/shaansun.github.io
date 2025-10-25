@@ -219,8 +219,8 @@
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 4rem;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 3rem;
       align-items: center;
     }
 
@@ -259,17 +259,20 @@
     .hero-image {
       position: relative;
       animation: fadeInRight 1s ease;
+      width: 100%;
+      max-width: 700px;
     }
 
     .hero-image-container {
       position: relative;
       border-radius: 20px;
-      overflow: hidden;
+      overflow: visible;
       box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
       border: 2px solid rgba(99, 102, 241, 0.3);
       background: rgba(15, 23, 42, 0.8);
       backdrop-filter: blur(10px);
       padding: 20px;
+      min-height: 500px;
     }
 
     .hero-image-container::before {
@@ -284,15 +287,22 @@
     }
 
     /* IoT Architecture Styles */
+    #iotArchitecture {
+      position: relative;
+      width: 100%;
+      height: 500px;
+    }
+
     .iot-node {
       background: rgba(30, 41, 59, 0.9);
       border-radius: 10px;
-      padding: 12px;
+      padding: 10px;
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
       text-align: center;
       transition: transform 0.3s, box-shadow 0.3s;
       position: absolute;
-      min-width: 80px;
+      min-width: 70px;
+      z-index: 10;
     }
 
     .iot-node:hover {
@@ -301,20 +311,22 @@
     }
 
     .iot-node-icon {
-      font-size: 2em;
-      margin-bottom: 5px;
+      font-size: 1.5em;
+      margin-bottom: 4px;
     }
 
     .iot-node-title {
       font-weight: 600;
       color: var(--text);
-      font-size: 0.75em;
+      font-size: 0.7em;
       margin-bottom: 2px;
+      line-height: 1.2;
     }
 
     .iot-node-subtitle {
-      font-size: 0.65em;
+      font-size: 0.6em;
       color: var(--text-dim);
+      line-height: 1.2;
     }
 
     .sensor-node { border-left: 3px solid #10b981; }
@@ -807,29 +819,29 @@
       svg.style.zIndex = '1';
       container.appendChild(svg);
 
-      // Define node positions
+      // Define node positions (responsive to container width)
       const layers = {
         sensors: [
-          { id: 's1', icon: '🌡️', title: 'Sensor 1', subtitle: 'Temperature', protocol: 'wifi', top: 80, left: 50 },
-          { id: 's2', icon: '💧', title: 'Sensor 2', subtitle: 'Humidity', protocol: 'mqtt', top: 180, left: 30 },
-          { id: 's3', icon: '📡', title: 'Sensor 3', subtitle: 'Pressure', protocol: 'lorawan', top: 280, left: 40 },
-          { id: 's4', icon: '🔋', title: 'Sensor 4', subtitle: 'Battery', protocol: 'ble', top: 380, left: 50 }
+          { id: 's1', icon: '🌡️', title: 'Sensor 1', subtitle: 'Temperature', protocol: 'wifi', top: 40, leftPercent: 5 },
+          { id: 's2', icon: '💧', title: 'Sensor 2', subtitle: 'Humidity', protocol: 'mqtt', top: 140, leftPercent: 2 },
+          { id: 's3', icon: '📡', title: 'Sensor 3', subtitle: 'Pressure', protocol: 'lorawan', top: 240, leftPercent: 4 },
+          { id: 's4', icon: '🔋', title: 'Sensor 4', subtitle: 'Battery', protocol: 'ble', top: 340, leftPercent: 5 }
         ],
         protocols: [
-          { id: 'p1', icon: '📶', title: 'Wi-Fi', protocol: 'wifi', top: 60, left: 200 },
-          { id: 'p2', icon: '📨', title: 'MQTT', protocol: 'mqtt', top: 150, left: 180 },
-          { id: 'p3', icon: '🔵', title: 'BLE', protocol: 'ble', top: 240, left: 190 },
-          { id: 'p4', icon: '📡', title: 'LoRaWAN', protocol: 'lorawan', top: 330, left: 200 },
-          { id: 'p5', icon: '🌐', title: 'HTTP', protocol: 'http', top: 420, left: 180 }
+          { id: 'p1', icon: '📶', title: 'Wi-Fi', protocol: 'wifi', top: 30, leftPercent: 25 },
+          { id: 'p2', icon: '📨', title: 'MQTT', protocol: 'mqtt', top: 110, leftPercent: 23 },
+          { id: 'p3', icon: '🔵', title: 'BLE', protocol: 'ble', top: 190, leftPercent: 24 },
+          { id: 'p4', icon: '📡', title: 'LoRaWAN', protocol: 'lorawan', top: 270, leftPercent: 25 },
+          { id: 'p5', icon: '🌐', title: 'HTTP', protocol: 'http', top: 350, leftPercent: 23 }
         ],
         gateway: [
-          { id: 'g1', icon: '🖥️', title: 'Network', subtitle: 'Server', top: 220, left: width * 0.5 }
+          { id: 'g1', icon: '🖥️', title: 'Network', subtitle: 'Server', top: 190, leftPercent: 48 }
         ],
         cloud: [
-          { id: 'c1', icon: '☁️', title: 'Cloud', subtitle: 'Storage', top: 220, left: width * 0.7 }
+          { id: 'c1', icon: '☁️', title: 'Cloud', subtitle: 'Storage', top: 190, leftPercent: 68 }
         ],
         webapp: [
-          { id: 'w1', icon: '💻', title: 'Dashboard', subtitle: 'Web App', top: 220, left: width * 0.85 }
+          { id: 'w1', icon: '💻', title: 'Dashboard', subtitle: 'Web App', top: 190, leftPercent: 85 }
         ]
       };
 
@@ -841,8 +853,8 @@
           nodeEl.className = `iot-node ${layerName.slice(0, -1)}-node`;
           nodeEl.id = node.id;
           nodeEl.style.top = node.top + 'px';
-          nodeEl.style.left = node.left + 'px';
-          nodeEl.style.zIndex = '2';
+          nodeEl.style.left = (width * node.leftPercent / 100) + 'px';
+          nodeEl.style.zIndex = '10';
           
           nodeEl.innerHTML = `
             <div class="iot-node-icon">${node.icon}</div>
@@ -851,7 +863,7 @@
           `;
           
           container.appendChild(nodeEl);
-          nodes[node.id] = { element: nodeEl, ...node };
+          nodes[node.id] = { element: nodeEl, left: width * node.leftPercent / 100, top: node.top, ...node };
         });
       });
 
@@ -866,10 +878,10 @@
           if (protocolNode) {
             const protocol = nodes[protocolNode.id];
             const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-            const x1 = sensorNode.left + 40;
-            const y1 = sensorNode.top + 25;
+            const x1 = sensorNode.left + 35;
+            const y1 = sensorNode.top + 20;
             const x2 = protocol.left;
-            const y2 = protocol.top + 25;
+            const y2 = protocol.top + 20;
             const midX = (x1 + x2) / 2;
             
             path.setAttribute('d', `M ${x1} ${y1} C ${midX} ${y1}, ${midX} ${y2}, ${x2} ${y2}`);
@@ -885,10 +897,10 @@
           const protocolNode = nodes[protocol.id];
           const gatewayNode = nodes.g1;
           const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-          const x1 = protocolNode.left + 40;
-          const y1 = protocolNode.top + 25;
+          const x1 = protocolNode.left + 35;
+          const y1 = protocolNode.top + 20;
           const x2 = gatewayNode.left;
-          const y2 = gatewayNode.top + 25;
+          const y2 = gatewayNode.top + 20;
           const midX = (x1 + x2) / 2;
           
           path.setAttribute('d', `M ${x1} ${y1} C ${midX} ${y1}, ${midX} ${y2}, ${x2} ${y2}`);
@@ -904,10 +916,10 @@
             const from = nodes[id];
             const to = nodes[arr[i + 1]];
             const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-            const x1 = from.left + 40;
-            const y1 = from.top + 25;
+            const x1 = from.left + 35;
+            const y1 = from.top + 20;
             const x2 = to.left;
-            const y2 = to.top + 25;
+            const y2 = to.top + 20;
             
             path.setAttribute('d', `M ${x1} ${y1} L ${x2} ${y2}`);
             path.setAttribute('stroke', 'rgba(139, 92, 246, 0.4)');
@@ -941,8 +953,8 @@
                 // Create packet
                 const packet = document.createElement('div');
                 packet.className = `data-packet packet-${sensor.protocol}`;
-                const startX = currentNode.left + 40;
-                const startY = currentNode.top + 25;
+                const startX = currentNode.left + 35;
+                const startY = currentNode.top + 20;
                 packet.style.left = startX + 'px';
                 packet.style.top = startY + 'px';
                 container.appendChild(packet);
@@ -952,8 +964,8 @@
 
                 // Move packet
                 setTimeout(() => {
-                  const endX = targetNode.left + 40;
-                  const endY = targetNode.top + 25;
+                  const endX = targetNode.left + 35;
+                  const endY = targetNode.top + 20;
                   packet.style.left = endX + 'px';
                   packet.style.top = endY + 'px';
 
