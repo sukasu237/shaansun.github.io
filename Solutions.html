@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Solutions — Shaansun Technologies</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    body {
+      background: linear-gradient(180deg, #f9fafc 0%, #e6f4ff 100%);
+      font-family: 'Poppins', sans-serif;
+      color: #222;
+      margin: 0;
+      padding: 0;
+    }
+
+    .solutions-hero {
+      text-align: center;
+      padding: 100px 20px 50px;
+      background: linear-gradient(135deg, #0077b6, #00b4d8);
+      color: #fff;
+      border-radius: 0 0 50px 50px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    }
+
+    .solutions-hero h1 {
+      font-size: 2.8em;
+      margin-bottom: 10px;
+    }
+
+    .solutions-hero p {
+      font-size: 1.2em;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .solutions-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      overflow: hidden;
+      position: relative;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .card:hover img {
+      transform: scale(1.08);
+    }
+
+    .card-icon {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: rgba(0, 119, 182, 0.9);
+      color: #fff;
+      font-size: 1.5em;
+      border-radius: 50%;
+      width: 45px;
+      height: 45px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    }
+
+    .card-content {
+      padding: 20px;
+    }
+
+    .card-content h3 {
+      color: #0077b6;
+      font-size: 1.25em;
+      margin-bottom: 10px;
+    }
+
+    .card-content p {
+      font-size: 0.95em;
+      color: #444;
+      line-height: 1.5;
+    }
+
+    footer {
+      background-color: #111;
+      color: #ccc;
+      padding: 20px;
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .nav .active {
+      color: #00b4d8;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html">
+        <img src="images/logo-placeholder.png" alt="Shaansun" class="logo"> Shaansun Technologies
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="solutions.html" class="active">Solutions</a>
+        <a href="courses.html">Courses</a>
+        <a href="contact.html" class="btn">Contact</a>
+      </nav>
+      <button class="hamburger" id="hamburger3" aria-label="Menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="solutions-hero" data-animate>
+      <h1>Our IoT Solutions</h1>
+      <p>Explore our full range of intelligent, connected, and data-driven IoT solutions designed to transform industries and enable smarter operations.</p>
+    </section>
+
+    <section class="solutions-grid">
+      <!-- IoT Solutions (18 total) -->
+      <div class="card">
+        <img src="images/iot-integration.jpg" alt="Smart Device Integration">
+        <div class="card-icon"><i class="fa-solid fa-plug"></i></div>
+        <div class="card-content"><h3>Smart Device Integration</h3><p>Seamlessly connect and control devices across platforms with secure IoT gateways and APIs.</p></div>
+      </div>
+
+      <div class="card">
+        <img src="images/iot-analytics.jpg" alt="Data Analytics & Visualization">
+        <div class="card-icon"><i class="fa-solid fa-chart-line"></i></div>
+        <div class="card-content"><h3>Data Analytics & Visualization</h3><p>Turn raw data into actionable insights with real-time dashboards and predictive analytics.</p></div>
+      </div>
+
+      <div class="card">
+        <img src="images/cloud-connectivity.jpg" alt="Cloud Connectivity">
+        <div class="card-icon"><i class="fa-solid fa-cloud"></i></div>
+        <div class="card-content"><h3>Cloud Connectivity</h3><p>Scalable IoT cloud storage, synchronization, and device management solutions.</p></div>
+      </div>
+
+      <div class="card">
+        <img src="images/edge-computing.jpg" alt="Edge Computing">
+        <div class="card-icon"><i class="fa-solid fa-microchip"></i></div>
+        <div class="card-content"><h3>Edge Computing</h3><p>Reduce latency and improve performance with local data processing and intelligent edge systems.</p></div>
+      </div>
+
+      <div class="card">
+        <img src="images/iot-security.jpg" alt="Security & Compliance">
+        <div class="card-icon"><i class="fa-solid fa-shield-halved"></i></div>
+        <div class="card-content"><h3>Security & Compliance</h3><p>End-to-end data encryption and compliance to keep your IoT ecosystem safe.</p></div>
+      </div>
+
+      <div class="card">
+        <img src="images/smart-energy.jpg" alt="Smart Energy Management">
+        <div class="card-icon"><i class="fa-solid fa-bolt"></i></div>
+        <div class="card-content"><h3>Smart Energy Management</h3><p>Monitor and optimize energy use through connected meters and analytics.</p></div>
+      </div>
+
+      <div class="card">
+        <img src="images/predictive-maintenance.jpg" alt="Predictive Maintenance">
+        <div class="card-icon"><i class="fa-solid fa-gears"></i></div>
+        <div class="card-content"><h3>Predictive Maintenance</h3><p>Detect equipment issues early using AI and sensor data for proactive maintenance.</p></div>
+      </div>
+
+      <div class="card">
+        <img src="images/asset-tracking.jpg" alt="Asset Tracking">
+        <div class="card-icon"><i class="fa-solid fa-location-dot"></i></div>
+        <div class="card-content"><h3>Asset Tracking & Management</h3><p>Real-time tracking of assets to improve utilization and reduce losses.</p></div>
+      </div>
+
+      <div class="card">
+        <img src="images/connected-vehicles.jpg" alt="Connected Vehicles">
+        <div class="card-icon"><i class="fa-solid fa-car"></i></div>
+        <div class="card-content"><h3>Connected Vehicles (Telematics)</h3><p>Enhance fleet management with real-time telemetry and driver analytics.</p></div>
+      </div>
+
+      <div class="card">
+        <img src="images/smart-retail.jpg" alt="Smart Retail">
+        <div class="card-icon"><i class="fa-solid fa-store"></i></div>
+        <div class="card-content"><h3>Smart Retail Solutions</h3><p>IoT-powered inventory tracking, digital signage, and personalized shopping experiences.</p></div>
+      </div>
+
+      <div class="card">
+        <img src="images/smart-agriculture.jpg" alt="Smart Agriculture">
+        <div class="card-icon"><i class="fa-solid fa-seedling"></i></div>
+        <div class="card-content"><h3>Smart Agriculture</h3><p>Precision farming with soil monitoring, automated irrigation, and livestock tracking.</p></div>
+      </div>
+
+      <div class="card">
+        <img src="images/healthcare-iot.jpg" alt="Healthcare IoT">
+        <div class="card-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+        <div class="card-content"><h3>Remote Patient Monitoring</h3><p>Continuous health tracking with IoT wearables and secure data communication.</p></div>
+      </div>
+
+      <div class="card">
+        <img src="images/smart-home.jpg" alt="Smart Home">
+        <div class="card-icon"><i class="fa-solid fa-house-signal"></i></div>
+        <div class="card-content"><h3>Smart Home Automation</h3><p>Connect lighting, HVAC, and security systems for intelligent living spaces.</p></div>
+      </div>
+
+      <div class="card">
+        <img src="images/industrial-iot.jpg" alt="Industrial IoT">
+        <div class="card-icon"><i class="fa-solid fa-industry"></i></div>
+        <div class="card-content"><h3>Industrial Automation (IIoT)</h3><p>Enable Industry 4.0 with real-time monitoring and predictive analytics in factories.</p></div>
+      </div>
+
+      <div class="card">
+        <img src="images/environmental-monitoring.jpg" alt="Environmental Monitoring">
+        <div class="card-icon"><i class="fa-solid fa-earth-asia"></i></div>
+        <div class="card-content"><h3>Environmental Monitoring</h3><p>Track air quality, temperature, and pollution using connected sensor networks.</p></div>
+      </div>
+
+      <div class="card">
+        <img src="images/smart-waste.jpg" alt="Smart Waste Management">
+        <div class="card-icon"><i class="fa-solid fa-recycle"></i></div>
+        <div class="card-content"><h3>Smart Waste Management</h3><p>Optimize waste collection routes using IoT-enabled bins and analytics.</p></div>
+      </div>
+
+      <div class="card">
+        <img src="images/smart-grid.jpg" alt="Smart Grid">
+        <div class="card-icon"><i class="fa-solid fa-network-wired"></i></div>
+        <div class="card-content"><h3>Smart Grid & Utilities</h3><p>Improve grid reliability with connected meters, demand response, and real-time monitoring.</p></div>
+      </div>
+
+      <div class="card">
+        <img src="images/smart-city.jpg" alt="Smart City">
+        <div class="card-icon"><i class="fa-solid fa-city"></i></div>
+        <div class="card-content"><h3>Smart City Infrastructure</h3><p>Develop connected urban systems for traffic, lighting, and public safety.</p></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">© <span id="year3"></span> Shaansun Technologies</div>
+  </footer>
+
+  <script src="assets/script.js"></script>
+</body>
+</html>
