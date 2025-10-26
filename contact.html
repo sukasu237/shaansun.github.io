@@ -42,29 +42,35 @@
       </div>
 
       <!-- FORM SECTION -->
-      <!-- Replace 'yourformid' with your actual Formspree form ID -->
-      <form class="contact-form card" 
-            action="https://formspree.io/f/yourformid" 
-            method="POST" 
-            data-animate>
+      <form class="contact-form card" action="send_mail.php" method="POST" data-animate>
         <label>
           <span>Name</span>
           <input type="text" name="name" required>
         </label>
+
         <label>
           <span>Email</span>
-          <input type="email" name="_replyto" required>
+          <input type="email" name="email" required>
         </label>
+
+        <label>
+          <span>Mobile Number</span>
+          <input type="tel" name="mobile" pattern="[0-9+\-\s]{7,20}" title="Please enter a valid phone number">
+        </label>
+
         <label>
           <span>Message</span>
           <textarea name="message" rows="6" required></textarea>
         </label>
 
-        <input type="hidden" name="_subject" value="New contact from shaansun.com">
-        <!-- After successful submission, it will redirect to thankyou.html -->
-        <input type="hidden" name="_next" value="https://www.shaansun.com/thankyou.html">
-
         <button type="submit" class="btn btn-primary">Send Message</button>
+
+        <!-- PHP success/error feedback -->
+        <?php if(isset($_GET['success'])): ?>
+          <p class="form-status success">✅ Your message has been sent successfully!</p>
+        <?php elseif(isset($_GET['error'])): ?>
+          <p class="form-status error">❌ There was an error sending your message. Please try again later.</p>
+        <?php endif; ?>
       </form>
     </section>
 
