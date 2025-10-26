@@ -6,19 +6,40 @@
   <title>Contact — Shaansun Technologies</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/style.css">
+  <style>
+    .thankyou-message {
+      display: none;
+      text-align: center;
+      margin: 3rem auto;
+      padding: 2rem;
+      background: #e6f4ea;
+      color: #256029;
+      border-radius: 12px;
+      max-width: 600px;
+      font-size: 1.2rem;
+    }
+    iframe {
+      width: 100%;
+      height: 900px;
+      border: none;
+      border-radius: 10px;
+    }
+  </style>
 </head>
+
 <body>
   <header class="nav">
     <div class="container nav-inner">
       <a class="brand" href="index.html">
-        <img src="images/logo-placeholder.png" alt="Shaansun" class="logo"> Shaansun Technologies
+        <img src="images/logo-placeholder.png" alt="Shaansun" class="logo">
+        Shaansun Technologies
       </a>
       <nav class="nav-links">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="solutions.html">Solutions</a>
         <a href="courses.html">Courses</a>
-        <a href="contact.html" class="btn active">Contact</a>
+        <a href="contact.html" class="btn">Contact</a>
       </nav>
       <button class="hamburger" id="hamburger5" aria-label="Menu">☰</button>
     </div>
@@ -27,33 +48,35 @@
   <main class="container contact-page">
     <section class="contact-hero" data-animate>
       <h1>Contact Us</h1>
-      <p>Questions about courses, corporate bookings, or custom training? Reach out to us below.</p>
+      <p>Have questions about our IT and IoT courses or corporate training? We’d love to hear from you.</p>
     </section>
 
     <section class="contact-grid">
       <div class="contact-info card" data-animate>
         <h3>Visit Us</h3>
         <p>
-          Shaansun Technologies<br>
+          <strong>Shaansun Technologies</strong><br>
           #237, 8th Cross Road, Opp. Vijaya Bank<br>
           Yelahanka New Town, Bangalore - 560064
         </p>
-        <p>Email: info@shaansun.com</p>
+        <p><strong>Email:</strong> info@shaansun.com</p>
       </div>
 
-      <!-- Google Form Embed -->
       <div class="contact-form card" data-animate>
-        <h3>Contact Form</h3>
         <iframe 
-          src="https://docs.google.com/forms/d/e/1FAIpQLSfPVfWclHI8WPdwfWkrxh_obeeIC-cbJo0CXZGAq_QSq8PVDQ/viewform?embedded=true" 
-          width="100%" height="900" frameborder="0" marginheight="0" marginwidth="0">
+          src="https://docs.google.com/forms/d/e/1FAIpQLSfPVfWclHI8WPdwfWkrxh_obeeIC-cbJo0CXZGAq_QSq8PVDQ/viewform?embedded=true"
+          id="googleForm">
           Loading…
         </iframe>
+        <div class="thankyou-message" id="thankyou">
+          ✅ <strong>Thank you!</strong> Your message has been sent successfully.<br>
+          Our team will contact you soon.
+        </div>
       </div>
     </section>
 
     <section class="map" data-animate>
-      <p>Map placeholder — replace with Google Maps iframe for exact location.</p>
+      <p>Map placeholder — replace with a Google Maps iframe for exact location.</p>
     </section>
   </main>
 
@@ -62,5 +85,12 @@
   </footer>
 
   <script src="assets/script.js"></script>
+  <script>
+    // Detect if redirected from Google Form "submit" confirmation
+    if (window.location.href.includes("formResponse")) {
+      document.getElementById("googleForm").style.display = "none";
+      document.getElementById("thankyou").style.display = "block";
+    }
+  </script>
 </body>
 </html>
