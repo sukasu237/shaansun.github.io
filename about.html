@@ -13,13 +13,18 @@
       color: #e2e8f0;
       line-height: 1.6;
       font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
     }
 
-    /* ===== HEADER ===== */
+    /* ===== STICKY HEADER ===== */
     .nav {
       background-color: #0f172a;
-      color: #fff;
+      position: sticky;
+      top: 0;
+      z-index: 999;
       padding: 10px 0;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
     }
 
     .nav-inner {
@@ -61,6 +66,13 @@
       color: #06b6d4;
     }
 
+    /* Adjust spacing so header doesn't overlap content */
+    main {
+      max-width: 1200px;
+      margin: 100px auto 40px; /* adds space below sticky header */
+      padding: 0 1.5rem;
+    }
+
     /* ===== FOOTER ===== */
     .footer {
       background-color: #0f172a;
@@ -68,10 +80,6 @@
       text-align: center;
       padding: 10px 0;
       font-size: 14px;
-    }
-
-    .footer span,
-    .footer {
       transition: color 0.3s ease;
     }
 
@@ -96,6 +104,12 @@
     .about-hero p {
       color: #e2e8f0;
       font-size: 1.2rem;
+    }
+
+    .team {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
     }
 
     .card {
@@ -153,6 +167,20 @@
       left: 0;
       font-weight: bold;
     }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+      .hamburger {
+        display: block;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 24px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -175,7 +203,7 @@
         <a href="about.html">About</a>
         <a href="solutions.html">Solutions</a>
         <a href="courses.html">Courses</a>
-        <a href="contact.html" class="btn btn-primary">Contact</a>
+        <a href="contact.html">Contact</a>
       </nav>
       <button class="hamburger" id="hamburger" aria-label="Menu">☰</button>
     </div>
@@ -186,7 +214,8 @@
       <h1>About Shaansun Technologies</h1>
       <p>Shaansun Technologies started with a mission to bridge the gap between academic learning and industry requirements in IoT & software engineering.</p>
     </section>
-    <section class="team grid-2">
+
+    <section class="team">
       <div class="card" data-animate>
         <h3>Our Mission</h3>
         <p>To create skilled engineers and entrepreneurs through practical, project-based training.</p>
@@ -196,6 +225,7 @@
         <p>Small batches, hands-on labs, and mentorship from working professionals.</p>
       </div>
     </section>
+
     <section class="timeline" data-animate>
       <h2>Why learners pick us</h2>
       <ul>
@@ -212,10 +242,11 @@
   </main>
 
   <footer class="footer">
-    <div class="container">© <span id="year2"></span> Shaansun Technologies</div>
+    © <span id="year2"></span> Shaansun Technologies
   </footer>
 
   <script>
+    // Auto-update footer year
     document.getElementById("year2").textContent = new Date().getFullYear();
   </script>
 </body>
