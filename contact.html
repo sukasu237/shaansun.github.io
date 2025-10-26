@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Shaansun Technologies</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fafafa;
+      color: #222;
+    }
+    header {
+      background: #fff;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      padding: 15px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    header .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 20px;
+    }
+    header a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      margin-left: 15px;
+    }
+    .contact-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 40px;
+      max-width: 1200px;
+      margin: 60px auto;
+      padding: 20px;
+    }
+    .contact-info, .contact-form {
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
+    .contact-info h2 {
+      margin-bottom: 15px;
+      color: #0077cc;
+    }
+    .contact-info p {
+      margin: 8px 0;
+      line-height: 1.6;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    input, textarea {
+      padding: 12px 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+      width: 100%;
+    }
+    button {
+      background: #0077cc;
+      color: #fff;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    button:hover {
+      background: #005fa3;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #0077cc;
+      color: #fff;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <div class="logo">
+        <a href="index.html"><strong>Shaansun Technologies</strong></a>
+      </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="solutions.html">Solutions</a>
+        <a href="courses.html">Courses</a>
+        <a href="contact.html" style="color:#0077cc; font-weight:600;">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="contact-container">
+      <div class="contact-info">
+        <h2>Contact Us</h2>
+        <p><strong>Shaansun Technologies</strong></p>
+        <p>#237, 8th Cross Road, Opp. Vijaya Bank<br>Yelahanka New Town, Bangalore - 560064</p>
+        <p><strong>Email:</strong> info@shaansun.com</p>
+        <p>We’d love to hear from you! Please fill out the form and our team will respond soon.</p>
+      </div>
+
+      <div class="contact-form">
+        <h2>Send a Message</h2>
+        <form action="https://formspree.io/f/your_form_id" method="POST">
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="Your Email" required>
+          <input type="tel" name="mobile" placeholder="Your Mobile Number" pattern="[0-9]{10}" required>
+          <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> Shaansun Technologies. All rights reserved.
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
