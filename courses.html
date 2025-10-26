@@ -4,31 +4,64 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Courses — Shaansun Technologies</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/style.css">
   <style>
-    /* body {
+    body {
       background-color: #0a0e1a;
       font-family: 'Poppins', sans-serif;
-      color: #e0e6ff;
-    } */
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: #0f172a;
-      color: #e2e8f0;
-      overflow-x: hidden;
+      color: #e0e0e0;
+    }
+
+    /* --- NAVIGATION BAR --- */
+    .nav {
+      background-color: #141b2d;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+      height: 4.5rem; /* increased height */
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+
+    .brand {
+      color: #ffffff !important; /* brand name visible */
+      font-size: 1.2rem;
+      font-weight: 600;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
       line-height: 1.6;
     }
 
-    header {
-      background: #141b2d;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
-      padding: 15px 0;
-      position: sticky;
-      top: 0;
-      z-index: 100;
+    .brand .logo {
+      height: 40px;
+      width: auto;
     }
 
+    .nav-links a {
+      color: #d1d1e0;
+      margin-left: 1rem;
+      text-decoration: none;
+      font-weight: 400;
+    }
+
+    .nav-links a.active {
+      color: #7ab8ff;
+      font-weight: 600;
+    }
+
+    .nav-links a:hover {
+      color: #7ab8ff;
+    }
+
+    /* --- REMAINDER OF YOUR DARK THEME --- */
     .courses-hero {
       text-align: center;
       margin: 2rem 0;
@@ -107,30 +140,25 @@
       text-align: center;
       margin-top: 2rem;
     }
-
-    .nav {
-      background-color: #141b2d;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.5);
-    }
-
-    .brand {
-      color: #ffffff;
-    }
-
-    .nav-links a {
-      color: #d1d1e0;
-    }
-
-    .nav-links a.active {
-      color: #7ab8ff;
-      font-weight: 600;
-    }
-
-    .nav-links a:hover {
-      color: #7ab8ff;
-    }
   </style>
 </head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html">
+        <img src="images/logo-placeholder.png" alt="Shaansun" class="logo">
+        Shaansun Technologies
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="solutions.html">Solutions</a>
+        <a href="courses.html" class="active">Courses</a>
+        <a href="contact.html" class="btn">Contact</a>
+      </nav>
+      <button class="hamburger" id="hamburger4" aria-label="Menu">☰</button>
+    </div>
+  </header>
 <body>
   <header class="nav">
     <div class="container nav-inner">
