@@ -1,5 +1,6 @@
 <?php
-// ShaanSun Contact Form Handler
+// Shaansun Contact Form Handler
+
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     // Sanitize inputs
@@ -15,19 +16,19 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
 
     // Recipient email
-    $to = "info@shaansun.com"; // ✅ All messages go here
+    $to = "info@shaansun.com"; // ✅ messages go to this email
 
     $subject = "New Contact Form Message from $name";
-    $body  = "You received a new message from the website contact form:\n\n";
+    $body  = "You have received a new message from the Shaansun Technologies website.\n\n";
     $body .= "Name: $name\n";
     $body .= "Email: $email\n";
     $body .= "Mobile: $mobile\n\n";
     $body .= "Message:\n$message\n";
-    $headers = "From: ShaanSun Website <no-reply@shaansun.com>\r\n";
+    $headers = "From: Shaansun Website <no-reply@shaansun.com>\r\n";
     $headers .= "Reply-To: $email\r\n";
     $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
 
-    // Send the email
+    // Send email
     if (mail($to, $subject, $body, $headers)) {
         header("Location: contact.html?success=1");
     } else {
