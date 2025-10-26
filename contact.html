@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Shaansun Technologies</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #0a0e1a;
+      color: #e0e6ff;
+    }
+
+    header {
+      background: #141b2d;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+      padding: 15px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    header .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 20px;
+    }
+
+    header a {
+      text-decoration: none;
+      color: #e0e6ff;
+      font-weight: 500;
+      margin-left: 15px;
+      transition: color 0.3s ease;
+    }
+
+    header a:hover {
+      color: #66b2ff;
+    }
+
+    .contact-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 40px;
+      max-width: 1200px;
+      margin: 60px auto;
+      padding: 20px;
+    }
+
+    .contact-info, .contact-form {
+      background: #1a1f35;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    }
+
+    .contact-info h2, .contact-form h2 {
+      margin-bottom: 15px;
+      color: #66b2ff;
+    }
+
+    .contact-info p {
+      margin: 8px 0;
+      line-height: 1.6;
+      color: #cfd6f6;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    input, textarea {
+      padding: 12px 15px;
+      border: 1px solid #2e3857;
+      border-radius: 8px;
+      font-size: 1rem;
+      width: 100%;
+      background: #141b2d;
+      color: #e0e6ff;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    input::placeholder, textarea::placeholder {
+      color: #9aa2c2;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    button {
+      background: #0077cc;
+      color: #fff;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.1s ease;
+    }
+
+    button:hover {
+      background: #3399ff;
+      transform: scale(1.02);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #141b2d;
+      color: #9aa2c2;
+      font-size: 0.9rem;
+    }
+
+    /* Thank-You Popup */
+    .popup {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      visibility: hidden;
+      opacity: 0;
+      transition: opacity 0.4s ease, visibility 0.4s ease;
+      z-index: 1000;
+    }
+
+    .popup.active {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .popup-content {
+      background: #1a1f35;
+      padding: 30px 40px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+      animation: fadeIn 0.4s ease;
+      max-width: 400px;
+      color: #e0e6ff;
+    }
+
+    .popup-content h3 {
+      color: #66b2ff;
+      margin-bottom: 10px;
+    }
+
+    .popup-content p {
+      color: #cfd6f6;
+      margin-bottom: 20px;
+    }
+
+    .popup-content button {
+      background: #0077cc;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: 10px 20px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    .popup-content button:hover {
+      background: #3399ff;
+    }
+
+    @keyframes fadeIn {
+      from { transform: translateY(-10px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <div class="logo">
+        <a href="index.html"><strong>Shaansun Technologies</strong></a>
+      </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="solutions.html">Solutions</a>
+        <a href="courses.html">Courses</a>
+        <a href="contact.html" style="color:#66b2ff; font-weight:600;">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="contact-container">
+      <div class="contact-info">
+        <h2>Contact Us</h2>
+        <p><strong>Shaansun Technologies</strong></p>
+        <p>#237, 8th Cross Road, Opp. Vijaya Bank<br>Yelahanka New Town, Bangalore - 560064</p>
+        <p><strong>Email:</strong> info@shaansun.com</p>
+        <p>We’d love to hear from you! Please fill out the form and our team will respond soon.</p>
+      </div>
+
+      <div class="contact-form">
+        <h2>Send a Message</h2>
+        <form id="contactForm" action="https://formspree.io/f/manlygbr" method="POST">
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="Your Email" required>
+          <input type="tel" name="mobile" placeholder="Your Mobile Number" pattern="[0-9]{10}" required>
+          <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> Shaansun Technologies. All rights reserved.
+  </footer>
+
+  <!-- Popup -->
+  <div class="popup" id="popup">
+    <div class="popup-content">
+      <h3>Thank You!</h3>
+      <p>Your message has been successfully sent.<br>Our team will get back to you shortly.</p>
+      <button id="closePopup">Close</button>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const form = document.getElementById('contactForm');
+    const popup = document.getElementById('popup');
+    const closePopup = document.getElementById('closePopup');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const formData = new FormData(form);
+
+      try {
+        const response = await fetch(form.action, {
+          method: form.method,
+          body: formData,
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (response.ok) {
+          form.reset();
+          popup.classList.add('active');
+          setTimeout(() => {
+            popup.classList.remove('active');
+          }, 3000); // Auto-close after 3 seconds
+        } else {
+          alert('There was a problem submitting your form. Please try again.');
+        }
+      } catch (error) {
+        alert('An error occurred. Please check your connection and try again.');
+      }
+    });
+
+    closePopup.addEventListener('click', () => {
+      popup.classList.remove('active');
+    });
+  </script>
+
+</body>
+</html>
