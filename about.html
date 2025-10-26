@@ -5,11 +5,9 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>About — Shaansun Technologies</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/style.css">
   <style>
     body {
       background: linear-gradient(135deg, #1e1b4b 0%, #0f172a 100%);
-      min-height: 100vh;
       color: #e2e8f0;
       line-height: 1.6;
       font-family: 'Poppins', sans-serif;
@@ -17,30 +15,30 @@
       padding: 0;
     }
 
-    /* ===== STICKY HEADER ===== */
+    /* ===== HEADER ===== */
     .nav {
       background-color: #0f172a;
       position: sticky;
       top: 0;
-      z-index: 999;
+      z-index: 1000;
       padding: 10px 0;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
     }
 
     .nav-inner {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
       max-width: 1200px;
       margin: 0 auto;
       padding: 0 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
 
     .brand {
       display: flex;
       align-items: center;
-      font-weight: 600;
       color: white;
+      font-weight: 600;
       text-decoration: none;
       transition: color 0.3s ease;
     }
@@ -66,28 +64,15 @@
       color: #06b6d4;
     }
 
-    /* Adjust spacing so header doesn't overlap content */
+    /* ===== MAIN CONTENT ===== */
     main {
       max-width: 1200px;
-      margin: 100px auto 40px; /* adds space below sticky header */
+      margin: 100px auto 60px;
       padding: 0 1.5rem;
+      position: relative;
+      z-index: 1;
     }
 
-    /* ===== FOOTER ===== */
-    .footer {
-      background-color: #0f172a;
-      color: white;
-      text-align: center;
-      padding: 10px 0;
-      font-size: 14px;
-      transition: color 0.3s ease;
-    }
-
-    .footer:hover {
-      color: #06b6d4;
-    }
-
-    /* ===== CONTENT SECTIONS ===== */
     .about-hero {
       background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(6, 182, 212, 0.1) 100%);
       border-radius: 12px;
@@ -168,24 +153,24 @@
       font-weight: bold;
     }
 
-    /* RESPONSIVE */
-    @media (max-width: 768px) {
-      .nav-links {
-        display: none;
-      }
-      .hamburger {
-        display: block;
-        background: none;
-        border: none;
-        color: white;
-        font-size: 24px;
-      }
+    /* ===== FOOTER ===== */
+    .footer {
+      background-color: #0f172a;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+      font-size: 14px;
+      transition: color 0.3s ease;
+    }
+
+    .footer:hover {
+      color: #06b6d4;
     }
   </style>
 </head>
 <body>
-  <header class="nav" id="nav">
-    <div class="container nav-inner">
+  <header class="nav">
+    <div class="nav-inner">
       <a class="brand" href="index.html">
         <svg class="logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
           <circle cx="50" cy="50" r="30" fill="none" stroke="white" stroke-width="4"/>
@@ -198,35 +183,34 @@
         </svg>
         Shaansun Technologies
       </a>
-      <nav class="nav-links" id="navLinks">
+      <nav class="nav-links">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="solutions.html">Solutions</a>
         <a href="courses.html">Courses</a>
         <a href="contact.html">Contact</a>
       </nav>
-      <button class="hamburger" id="hamburger" aria-label="Menu">☰</button>
     </div>
   </header>
 
-  <main class="container">
-    <section class="about-hero" data-animate>
+  <main>
+    <section class="about-hero">
       <h1>About Shaansun Technologies</h1>
       <p>Shaansun Technologies started with a mission to bridge the gap between academic learning and industry requirements in IoT & software engineering.</p>
     </section>
 
     <section class="team">
-      <div class="card" data-animate>
+      <div class="card">
         <h3>Our Mission</h3>
         <p>To create skilled engineers and entrepreneurs through practical, project-based training.</p>
       </div>
-      <div class="card" data-animate>
+      <div class="card">
         <h3>Our Approach</h3>
         <p>Small batches, hands-on labs, and mentorship from working professionals.</p>
       </div>
     </section>
 
-    <section class="timeline" data-animate>
+    <section class="timeline">
       <h2>Why learners pick us</h2>
       <ul>
         <li>Project-based curriculum</li>
@@ -246,7 +230,6 @@
   </footer>
 
   <script>
-    // Auto-update footer year
     document.getElementById("year2").textContent = new Date().getFullYear();
   </script>
 </body>
