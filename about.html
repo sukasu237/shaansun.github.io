@@ -90,7 +90,7 @@
   </style>
 </head>
 <body>
-  <header class="nav">
+  <!-- <header class="nav">
     <div class="container nav-inner">
       <a class="brand" href="index.html"><img src="images/logo-placeholder.png" alt="Shaansun" class="logo"> Shaansun Technologies</a>
       <nav class="nav-links">
@@ -102,7 +102,33 @@
       </nav>
       <button class="hamburger" id="hamburger2" aria-label="Menu">☰</button>
     </div>
+  </header> -->
+
+    <header class="nav" id="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html">
+        <svg class="logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="50" cy="50" r="30" fill="none" stroke="white" stroke-width="4"/>
+          <circle cx="50" cy="30" r="5" fill="white"/>
+          <circle cx="35" cy="60" r="5" fill="white"/>
+          <circle cx="65" cy="60" r="5" fill="white"/>
+          <line x1="50" y1="35" x2="35" y2="55" stroke="white" stroke-width="3"/>
+          <line x1="50" y1="35" x2="65" y2="55" stroke="white" stroke-width="3"/>
+          <line x1="35" y1="60" x2="65" y2="60" stroke="white" stroke-width="3"/>
+        </svg>
+        Shaansun Technologies
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="solutions.html">Solutions</a>
+        <a href="courses.html">Courses</a>
+        <a href="contact.html" class="btn btn-primary">Contact</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Menu">☰</button>
+    </div>
   </header>
+  
   <main class="container">
     <section class="about-hero" data-animate>
       <h1>About Shaansun Technologies</h1>
