@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Solutions — Shaansun Technologies</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    body {
+      background-color: #0a0e1a;
+      font-family: 'Poppins', sans-serif;
+      color: #e0e3ff;
+      margin: 0;
+      padding: 0;
+    }
+
+    header.nav {
+      background-color: #141b2d;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+      padding: 10px 0;
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 20px;
+    }
+
+    .brand {
+      font-weight: 600;
+      color: #ffffff;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+    }
+
+    .brand img.logo {
+      height: 40px;
+      margin-right: 10px;
+    }
+
+    .nav-links a {
+      color: #e0e3ff;
+      margin: 0 12px;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover,
+    .nav-links .active {
+      color: #00b4d8;
+    }
+
+    .btn {
+      background: #0077b6;
+      color: white;
+      padding: 8px 16px;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background: #0096c7;
+    }
+
+    .solutions-hero {
+      text-align: center;
+      padding: 100px 20px 50px;
+      background: linear-gradient(135deg, #141b2d, #1a1f35);
+      color: #fff;
+      border-radius: 0 0 50px 50px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+    }
+
+    .solutions-hero h1 {
+      font-size: 2.8em;
+      margin-bottom: 10px;
+    }
+
+    .solutions-hero p {
+      font-size: 1.2em;
+      max-width: 700px;
+      margin: 0 auto;
+      color: #b8c1ec;
+    }
+
+    .solutions-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .card {
+      background: #1a1f35;
+      border-radius: 18px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+      overflow: hidden;
+      position: relative;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.7);
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .card:hover img {
+      transform: scale(1.08);
+    }
+
+    .card-icon {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: rgba(0, 180, 216, 0.85);
+      color: #fff;
+      font-size: 1.5em;
+      border-radius: 50%;
+      width: 45px;
+      height: 45px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.5);
+    }
+
+    .card-content {
+      padding: 20px;
+    }
+
+    .card-content h3 {
+      color: #00b4d8;
+      font-size: 1.25em;
+      margin-bottom: 10px;
+    }
+
+    .card-content p {
+      font-size: 0.95em;
+      color: #cbd5f7;
+      line-height: 1.6;
+    }
+
+    footer {
+      background-color: #141b2d;
+      color: #9da3c0;
+      padding: 20px;
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .nav .active {
+      color: #00b4d8;
+      font-weight: 600;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .solutions-hero {
+        padding: 80px 20px 40px;
+      }
+      .solutions-hero h1 {
+        font-size: 2.2em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html">
+        <img src="images/logo-placeholder.png" alt="Shaansun" class="logo"> Shaansun Technologies
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="solutions.html" class="active">Solutions</a>
+        <a href="courses.html">Courses</a>
+        <a href="contact.html" class="btn">Contact</a>
+      </nav>
+      <button class="hamburger" id="hamburger3" aria-label="Menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="solutions-hero" data-animate>
+      <h1>Our IoT Solutions</h1>
+      <p>Explore our full range of intelligent, connected, and data-driven IoT solutions designed to transform industries and enable smarter operations.</p>
+    </section>
+
+    <section class="solutions-grid">
+      <!-- All 18 IoT solution cards remain the same -->
+      <!-- (Keep your existing <div class="card"> ... </div> blocks as-is) -->
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">© <span id="year3"></span> Shaansun Technologies</div>
+  </footer>
+
+  <script src="assets/script.js"></script>
+</body>
+</html>
