@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>About — Shaansun Technologies</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+  <style>
+    body {
+      background: linear-gradient(135deg, #1e1b4b 0%, #0f172a 100%);
+      min-height: 100vh;
+      color: #e2e8f0;
+      line-height: 1.6;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /* ===== HEADER ===== */
+    .nav {
+      background-color: #0f172a;
+      color: #fff;
+      padding: 10px 0;
+    }
+
+    .nav-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      font-weight: 600;
+      color: white;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .brand:hover {
+      color: #06b6d4;
+    }
+
+    .logo {
+      width: 35px;
+      height: 35px;
+      margin-right: 10px;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      margin-left: 1.5rem;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: #06b6d4;
+    }
+
+    /* ===== FOOTER ===== */
+    .footer {
+      background-color: #0f172a;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+      font-size: 14px;
+    }
+
+    .footer span,
+    .footer {
+      transition: color 0.3s ease;
+    }
+
+    .footer:hover {
+      color: #06b6d4;
+    }
+
+    /* ===== CONTENT SECTIONS ===== */
+    .about-hero {
+      background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(6, 182, 212, 0.1) 100%);
+      border-radius: 12px;
+      padding: 3rem 2rem;
+      margin-bottom: 3rem;
+      border: 1px solid rgba(99, 102, 241, 0.2);
+    }
+
+    .about-hero h1 {
+      color: #6366f1;
+      margin-bottom: 1rem;
+    }
+
+    .about-hero p {
+      color: #e2e8f0;
+      font-size: 1.2rem;
+    }
+
+    .card {
+      background: linear-gradient(135deg, rgba(15, 23, 42, 0.8) 0%, rgba(30, 27, 75, 0.8) 100%);
+      border: 1px solid rgba(99, 102, 241, 0.3);
+      border-radius: 12px;
+      padding: 2rem;
+      transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: #06b6d4;
+      box-shadow: 0 10px 30px rgba(6, 182, 212, 0.2);
+    }
+
+    .card h3 {
+      color: #06b6d4;
+      margin-bottom: 1rem;
+    }
+
+    .card p {
+      color: #cbd5e1;
+    }
+
+    .timeline {
+      background: rgba(99, 102, 241, 0.05);
+      border-left: 4px solid #6366f1;
+      padding: 2rem;
+      border-radius: 8px;
+      margin-top: 3rem;
+    }
+
+    .timeline h2 {
+      color: #6366f1;
+      margin-bottom: 1.5rem;
+    }
+
+    .timeline ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .timeline li {
+      color: #e2e8f0;
+      padding: 0.75rem 0;
+      padding-left: 1.5rem;
+      position: relative;
+    }
+
+    .timeline li::before {
+      content: "→";
+      color: #06b6d4;
+      position: absolute;
+      left: 0;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <header class="nav" id="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html">
+        <svg class="logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="50" cy="50" r="30" fill="none" stroke="white" stroke-width="4"/>
+          <circle cx="50" cy="30" r="5" fill="white"/>
+          <circle cx="35" cy="60" r="5" fill="white"/>
+          <circle cx="65" cy="60" r="5" fill="white"/>
+          <line x1="50" y1="35" x2="35" y2="55" stroke="white" stroke-width="3"/>
+          <line x1="50" y1="35" x2="65" y2="55" stroke="white" stroke-width="3"/>
+          <line x1="35" y1="60" x2="65" y2="60" stroke="white" stroke-width="3"/>
+        </svg>
+        Shaansun Technologies
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="solutions.html">Solutions</a>
+        <a href="courses.html">Courses</a>
+        <a href="contact.html" class="btn btn-primary">Contact</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Menu">☰</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="about-hero" data-animate>
+      <h1>About Shaansun Technologies</h1>
+      <p>Shaansun Technologies started with a mission to bridge the gap between academic learning and industry requirements in IoT & software engineering.</p>
+    </section>
+    <section class="team grid-2">
+      <div class="card" data-animate>
+        <h3>Our Mission</h3>
+        <p>To create skilled engineers and entrepreneurs through practical, project-based training.</p>
+      </div>
+      <div class="card" data-animate>
+        <h3>Our Approach</h3>
+        <p>Small batches, hands-on labs, and mentorship from working professionals.</p>
+      </div>
+    </section>
+    <section class="timeline" data-animate>
+      <h2>Why learners pick us</h2>
+      <ul>
+        <li>Project-based curriculum</li>
+        <li>Faculty Development Programme</li>
+        <li>Workshop</li>
+        <li>Internship Programme</li>
+        <li>One-Credit Course Training</li>
+        <li>Skill Development Programme</li>
+        <li>Industry Partnerships</li>
+        <li>Placement Assistance</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">© <span id="year2"></span> Shaansun Technologies</div>
+  </footer>
+
+  <script>
+    document.getElementById("year2").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
