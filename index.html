@@ -484,8 +484,8 @@
       flex-grow: 1;
     }
 
-    /* CTA Section */
-    .cta {
+     /* CTA Section */
+    /*.cta {
       padding: 4rem 0;
       text-align: center;
     }
@@ -516,7 +516,47 @@
       margin-bottom: 2rem;
       position: relative;
       z-index: 1;
+    } */
+
+    /*==start=====CTA book for a consultation======*/
+    .cta {
+      padding: 4rem 0;
+      text-align: center;
     }
+    .cta-inner {
+      position: relative;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 50px 30px;
+      background: #141b2d;
+      border-radius: 16px;
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+
+    .cta-inner::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.05), transparent);
+      animation: shine 4s infinite;
+      pointer-events: none; /* ✅ Ensures click works */
+    }
+
+    @keyframes shine {
+      0% { transform: translateX(-50%) rotate(45deg); }
+      100% { transform: translateX(50%) rotate(45deg); }
+    }
+
+    .cta inner h3 {
+      font-size: 1.8rem;
+      color: #66b2ff;
+      margin-bottom: 25px;
+    }
+/*===end====CTA book for a consultation======*/
 
     /* Footer */
     .footer {
@@ -741,12 +781,20 @@
       </div>
     </section>
 
-    <section class="cta container" data-animate>
+    <!-- <section class="cta container" data-animate>
       <div class="cta-inner">
         <h3>Ready to build the future?</h3>
         <a class="btn btn-primary" href="contact.html">Book a Free Consultation</a>
       </div>
-    </section>
+    </section> -->
+
+    <section class="cta" id="cta">
+    <div class="cta-inner">
+      <h3>Ready to build the future?</h3>
+      <a class="btn btn-primary" href="contact.html">Book a Free Consultation</a>
+    </div>
+  </section>
+    
   </main>
 
   <footer class="footer">
