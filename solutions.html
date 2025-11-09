@@ -204,6 +204,26 @@
         font-size: 2.2em;
       }
     }
+    /*=====read more button=====*/
+        .read-more-btn {
+      background: linear-gradient(90deg, #0077ff, #00cc88);
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: 8px 16px;
+      margin-top: 10px;
+      cursor: pointer;
+      font-weight: 500;
+      transition: background 0.3s ease;
+    }
+    .read-more-btn:hover {
+      background: linear-gradient(90deg, #0066cc, #00b377);
+    }
+    .more-content p {
+      margin-top: 10px;
+    }
+
+    
   </style>
 </head>
 
@@ -230,135 +250,300 @@
       <p>Explore our full range of intelligent, connected, and data-driven IoT solutions designed to transform industries and enable smarter operations.</p>
     </section>
 
-    <section class="solutions-grid">
-      <!-- IoT Solutions (18 total) -->
-      
-       <div class="card">
-        <img src="https://raw.githubusercontent.com/sukasu237/shaansun.github.io/main/solimages/agri.avif" alt="Smart Agriculture">
-        <div class="card-icon"><i class="fa-solid fa-seedling"></i></div>
-        <div class="card-content">
-          <h3>Smart Agriculture</h3>
-          <p>Precision farming with soil monitoring, automated irrigation, and livestock tracking.</p>
+   <section class="solutions-grid">
+
+      <!-- 1. Smart City Infrastructure -->
+  <div class="card">
+    <img src="https://raw.githubusercontent.com/sukasu237/shaansun.github.io/main/solimages/smartcity.jpg" alt="Smart City Infrastructure">
+    <div class="card-icon"><i class="fa-solid fa-city"></i></div>
+    <div class="card-content">
+      <h3>Smart City Infrastructure</h3>
+      <p>IoT-driven solutions for traffic, utilities, safety, and urban sustainability.</p>
+      <div class="more-content" style="display:none;">
+        <p>From smart lighting and traffic control to environmental monitoring and public safety, our IoT ecosystem supports real-time governance. Data from city sensors enables efficient resource allocation and citizen-focused urban planning.</p>
+      </div>
+      <button class="read-more-btn" onclick="toggleContent(this)">Read More</button>
+    </div>
+  </div>
+
+      <!-- 2. Smart Agriculture -->
+  <div class="card">
+    <img src="https://raw.githubusercontent.com/sukasu237/shaansun.github.io/main/solimages/agri.avif" alt="Smart Agriculture">
+    <div class="card-icon"><i class="fa-solid fa-seedling"></i></div>
+    <div class="card-content">
+      <h3>Smart Agriculture</h3>
+      <p>Precision farming with soil monitoring, automated irrigation, and livestock tracking.</p>
+      <div class="more-content" style="display:none;">
+        <p>IoT-enabled devices measure soil nutrients, moisture, and weather data to optimize irrigation and fertilization. Drones and sensors improve yield prediction and resource management, supporting sustainable and data-driven farming.</p>
+      </div>
+      <button class="read-more-btn" onclick="toggleContent(this)">Read More</button>
+    </div>
+  </div>
+
+<!-- 3. Healthcare Monitoring -->
+  <div class="card">
+    <img src="https://raw.githubusercontent.com/sukasu237/shaansun.github.io/main/solimages/patient.jpg" alt="Remote Patient Monitoring">
+    <div class="card-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+    <div class="card-content">
+      <h3>Smart Healthcare Monitoring</h3>
+      <p>Continuous health tracking through IoT-enabled wearable and home sensors.</p>
+      <div class="more-content" style="display:none;">
+        <p>Patients can share real-time vitals with doctors, enabling faster diagnosis and treatment. IoT platforms ensure secure cloud transmission of ECG, SpO₂, and temperature data, empowering telemedicine and early intervention.</p>
+      </div>
+      <button class="read-more-btn" onclick="toggleContent(this)">Read More</button>
+    </div>
+  </div>
+
+ <!-- 4. Smart Energy Management -->
+  <div class="card">
+    <img src="https://raw.githubusercontent.com/sukasu237/shaansun.github.io/main/solimages/energymang.jpg" alt="Smart Energy Management">
+    <div class="card-icon"><i class="fa-solid fa-bolt"></i></div>
+    <div class="card-content">
+      <h3>Smart Energy Management</h3>
+      <p>Optimize power usage and monitor energy consumption across facilities.</p>
+      <div class="more-content" style="display:none;">
+        <p>IoT-enabled energy meters and load controllers monitor electricity flow in real-time, helping industries reduce wastage and improve efficiency. Predictive analytics support demand forecasting and renewable integration for sustainability.</p>
+      </div>
+      <button class="read-more-btn" onclick="toggleContent(this)">Read More</button>
+    </div>
+  </div>
+     
+ 
+  <!--5. Industrial Automation (IIoT) -->
+  <div class="card">
+    <img src="https://raw.githubusercontent.com/sukasu237/shaansun.github.io/main/solimages/industry.jpg" alt="Industrial Automation">
+    <div class="card-icon"><i class="fa-solid fa-gears"></i></div>
+    <div class="card-content">
+      <h3>Industrial Automation (IIoT)</h3>
+      <p>Smart factories with real-time production monitoring and control systems.</p>
+      <div class="more-content" style="display:none;">
+        <p>IIoT connects industrial equipment for predictive analytics, quality control, and process optimization. Edge AI and robotics enhance production precision, reduce downtime, and support Industry 4.0 transformation.</p>
+      </div>
+      <button class="read-more-btn" onclick="toggleContent(this)">Read More</button>
+    </div>
+  </div>
+
+  <!-- 6. Environmental Monitoring -->
+  <div class="card">
+    <img src="https://raw.githubusercontent.com/sukasu237/shaansun.github.io/main/solimages/environment.jpg" alt="Environmental Monitoring">
+    <div class="card-icon"><i class="fa-solid fa-leaf"></i></div>
+    <div class="card-content">
+      <h3>Environmental Monitoring</h3>
+      <p>Real-time tracking of air, water, and soil quality using IoT sensors.</p>
+      <div class="more-content" style="display:none;">
+        <p>Smart sensors measure pollution levels, temperature, humidity, and particulate matter. Data analytics platforms visualize environmental patterns to aid sustainable policy-making and public health management.</p>
+      </div>
+      <button class="read-more-btn" onclick="toggleContent(this)">Read More</button>
+    </div>
+  </div>
+
+     <!-- 8. Asset Tracking & Management -->
+  <div class="card">
+    <img src="https://raw.githubusercontent.com/sukasu237/shaansun.github.io/main/solimages/AssetTracking.jpg" alt="Asset Tracking & Management">
+    <div class="card-icon"><i class="fa-solid fa-location-dot"></i></div>
+    <div class="card-content">
+      <h3>Asset Tracking & Management</h3>
+      <p>Real-time asset tracking using GPS, RFID, and sensor-based systems.</p>
+      <div class="more-content" style="display:none;">
+        <p>Our IoT asset management solution provides live location, utilization metrics, and predictive analytics for logistics, manufacturing, and warehouse operations. It ensures operational visibility and reduces asset loss.</p>
+      </div>
+      <button class="read-more-btn" onclick="toggleContent(this)">Read More</button>
+    </div>
+  </div>
+
+  <!--7. Smart Waste Management -->
+  <div class="card">
+    <img src="https://raw.githubusercontent.com/sukasu237/shaansun.github.io/main/solimages/waste.jpg" alt="Smart Waste Management">
+    <div class="card-icon"><i class="fa-solid fa-dumpster"></i></div>
+    <div class="card-content">
+      <h3>Smart Waste Management</h3>
+      <p>IoT-driven collection, tracking, and optimization of waste disposal systems.</p>
+      <div class="more-content" style="display:none;">
+        <p>Smart bins with level sensors optimize pickup routes and reduce overflow. IoT-enabled waste tracking helps cities improve recycling efficiency and environmental cleanliness.</p>
+      </div>
+      <button class="read-more-btn" onclick="toggleContent(this)">Read More</button>
+    </div>
+  </div>
+
+  <!-- 8. Smart Grid & Utilities -->
+  <div class="card">
+    <img src="https://raw.githubusercontent.com/sukasu237/shaansun.github.io/main/solimages/grid.jpg" alt="Smart Grid">
+    <div class="card-icon"><i class="fa-solid fa-plug"></i></div>
+    <div class="card-content">
+      <h3>Smart Grid & Utilities</h3>
+      <p>Advanced IoT-enabled infrastructure for power distribution and efficiency.</p>
+      <div class="more-content" style="display:none;">
+        <p>IoT sensors and smart meters monitor grid health and energy demand in real time. Predictive analytics reduce outages and improve load balancing, enabling renewable integration and cost savings for utilities.</p>
+      </div>
+      <button class="read-more-btn" onclick="toggleContent(this)">Read More</button>
+    </div>
+  </div>
+
+<!-- 9. Mining Solutions -->
+  <div class="card">
+  <img src="https://raw.githubusercontent.com/sukasu237/shaansun.github.io/main/solimages/mining.avif" alt="Mining Solutions">
+  <div class="card-icon"><i class="fa-solid fa-hard-hat"></i></div>
+  <div class="card-content">
+    <h3>Mining Solutions</h3>
+    <p>
+      Our IoT-based Mining Solutions transform traditional mining operations into smart, connected ecosystems using real-time data analytics and predictive insights.
+    </p>
+
+        <!-- Hidden extra content -->
+        <div class="more-content" style="display: none;">
+          <p>
+            We enable predictive maintenance for heavy machinery, improving uptime and reducing costs. IoT-enabled wearables enhance worker safety through health tracking and location monitoring in hazardous zones.
+          </p>
+          <p>
+            Environmental sensors continuously track dust, air quality, vibration, and gas emissions to maintain compliance and sustainability goals. Intelligent fleet management systems help optimize fuel use and equipment utilization.
+          </p>
+          <p>
+            Remote monitoring and automation powered by edge computing and cloud connectivity allow centralized control across mining sites, boosting efficiency and reducing human risk.
+          </p>
         </div>
+
+        <!-- Toggle button -->
+        <button class="read-more-btn" onclick="toggleContent(this)" 
+          <!-- style="background: linear-gradient(90deg, #0077ff, #00cc88); color: #fff; border: none; border-radius: 8px; padding: 8px 16px; margin-top: 10px; cursor: pointer;"> -->
+          Read More
+        </button>
       </div>
+    </div>
 
-      <div class="card">
-        <img src="https://raw.githubusercontent.com/sukasu237/shaansun.github.io/main/solimages/patient.jpg" alt="Healthcare IoT">
-        <div class="card-icon"><i class="fa-solid fa-heart-pulse"></i></div>
-        <div class="card-content"><h3>Smart Healthcare Systems</h3><p>Continuous health tracking with IoT wearables and secure data communication.</p></div>
+      <!-- 10. Smart Home Automation -->
+  <div class="card">
+    <img src="https://raw.githubusercontent.com/sukasu237/shaansun.github.io/main/solimages/home.jpg" alt="Smart Home Automation">
+    <div class="card-icon"><i class="fa-solid fa-house-signal"></i></div>
+    <div class="card-content">
+      <h3>Smart Home Automation</h3>
+      <p>Automate lighting, appliances, and security for connected living spaces.</p>
+      <div class="more-content" style="display:none;">
+        <p>Voice-controlled assistants, smart thermostats, and motion sensors enhance comfort and energy efficiency. IoT-based home systems provide safety alerts, appliance management, and remote access through mobile devices.</p>
       </div>
+      <button class="read-more-btn" onclick="toggleContent(this)">Read More</button>
+    </div>
+  </div>
 
-      <div class="card">
-        <img src="https://raw.githubusercontent.com/sukasu237/shaansun.github.io/main/solimages/smarthome.jpg" alt="Smart Home">
-        <div class="card-icon"><i class="fa-solid fa-house-signal"></i></div>
-        <div class="card-content"><h3>Smart Home Automation</h3><p>Connect lighting, HVAC, and security systems for intelligent living spaces.</p></div>
+
+  <!-- 11. Smart Device Integration -->
+  <div class="card">
+    <img src="https://raw.githubusercontent.com/sukasu237/shaansun.github.io/main/solimages/device.jpg" alt="Smart Device Integration">
+    <div class="card-icon"><i class="fa-solid fa-network-wired"></i></div>
+    <div class="card-content">
+      <h3>Smart Device Integration</h3>
+      <p>Seamlessly connect heterogeneous IoT devices into one unified, secure ecosystem.</p>
+      <div class="more-content" style="display:none;">
+        <p>Our integration platform supports multi-protocol connectivity (MQTT, CoAP, HTTP) enabling interoperability between sensors, controllers, and gateways. It simplifies onboarding and ensures real-time data flow for large-scale IoT deployments while maintaining high scalability and reliability.</p>
       </div>
+      <button class="read-more-btn" onclick="toggleContent(this)">Read More</button>
+    </div>
+  </div>
 
-      <div class="card">
-        <img src="https://raw.githubusercontent.com/sukasu237/shaansun.github.io/main/solimages/iiot.jpg" alt="Industrial IoT">
-        <div class="card-icon"><i class="fa-solid fa-industry"></i></div>
-        <div class="card-content"><h3>Industrial Automation (IIoT)</h3><p>Enable Industry 4.0 with real-time monitoring and predictive analytics in factories.</p></div>
+  <!-- 12. Data Analytics & Visualization -->
+  <div class="card">
+    <img src="https://raw.githubusercontent.com/sukasu237/shaansun.github.io/main/solimages/dataanalysis.jpg" alt="Data Analytics & Visualization">
+    <div class="card-icon"><i class="fa-solid fa-chart-line"></i></div>
+    <div class="card-content">
+      <h3>Data Analytics & Visualization</h3>
+      <p>Transform raw IoT data into actionable insights through AI-driven dashboards.</p>
+      <div class="more-content" style="display:none;">
+        <p>We offer real-time analytics engines and interactive dashboards that reveal performance trends, operational bottlenecks, and predictive patterns. Integration with AI/ML models enables anomaly detection, forecasting, and optimization of IoT-driven operations.</p>
       </div>
+      <button class="read-more-btn" onclick="toggleContent(this)">Read More</button>
+    </div>
+  </div>
 
-      <div class="card">
-        <img src="https://raw.githubusercontent.com/sukasu237/shaansun.github.io/main/solimages/environmental.webp" alt="Environmental Monitoring">
-        <div class="card-icon"><i class="fa-solid fa-earth-asia"></i></div>
-        <div class="card-content"><h3>Environmental Monitoring</h3><p>Track air quality, temperature, and pollution using connected sensor networks.</p></div>
+  <!-- 13. Cloud Connectivity -->
+  <div class="card">
+    <img src="https://raw.githubusercontent.com/sukasu237/shaansun.github.io/main/solimages/cloud.jpg" alt="Cloud Connectivity">
+    <div class="card-icon"><i class="fa-solid fa-cloud"></i></div>
+    <div class="card-content">
+      <h3>Cloud Connectivity</h3>
+      <p>Secure and scalable IoT cloud integration for remote data storage and management.</p>
+      <div class="more-content" style="display:none;">
+        <p>Our cloud-based IoT architecture leverages AWS IoT Core, Azure IoT Hub, or Google Cloud IoT for seamless device connectivity, data ingestion, and edge-cloud synchronization. End-to-end encryption and access control ensure data integrity and privacy.</p>
       </div>
+      <button class="read-more-btn" onclick="toggleContent(this)">Read More</button>
+    </div>
+  </div>
 
-      <div class="card">
-        <img src="https://raw.githubusercontent.com/sukasu237/shaansun.github.io/main/solimages/smartwaste.jpg" alt="Smart Waste Management">
-        <div class="card-icon"><i class="fa-solid fa-recycle"></i></div>
-        <div class="card-content"><h3>Smart Waste Management</h3><p>Optimize waste collection routes using IoT-enabled bins and analytics.</p></div>
+  <!-- 14. Edge Computing -->
+  <div class="card">
+    <img src="https://raw.githubusercontent.com/sukasu237/shaansun.github.io/main/solimages/edgec.jpg" alt="Edge Computing">
+    <div class="card-icon"><i class="fa-solid fa-microchip"></i></div>
+    <div class="card-content">
+      <h3>Edge Computing</h3>
+      <p>Process IoT data locally at the edge for faster, real-time decision-making.</p>
+      <div class="more-content" style="display:none;">
+        <p>Our edge computing solutions enable latency-free analytics, minimizing cloud dependency. Data is processed near the source using AI models for instant alerts, automation, and optimized bandwidth usage, ideal for industrial and remote site operations.</p>
       </div>
+      <button class="read-more-btn" onclick="toggleContent(this)">Read More</button>
+    </div>
+  </div>
 
-      <div class="card">
-        <img src="https://raw.githubusercontent.com/sukasu237/shaansun.github.io/main/solimages/smartgrid.jpeg" alt="Smart Grid">
-        <div class="card-icon"><i class="fa-solid fa-network-wired"></i></div>
-        <div class="card-content"><h3>Smart Grid & Utilities</h3><p>Improve grid reliability with connected meters, demand response, and real-time monitoring.</p></div>
+  <!-- 15. Security & Compliance -->
+  <div class="card">
+    <img src="https://raw.githubusercontent.com/sukasu237/shaansun.github.io/main/solimages/security.jpg" alt="Security & Compliance">
+    <div class="card-icon"><i class="fa-solid fa-shield-halved"></i></div>
+    <div class="card-content">
+      <h3>Security & Compliance</h3>
+      <p>Comprehensive IoT cybersecurity framework ensuring secure device operations.</p>
+      <div class="more-content" style="display:none;">
+        <p>We implement multi-layer security—encryption, device authentication, and firmware integrity checks—complying with global standards like ISO 27001 and GDPR. Continuous threat monitoring and secure OTA updates safeguard your network.</p>
       </div>
+      <button class="read-more-btn" onclick="toggleContent(this)">Read More</button>
+    </div>
+  </div>
 
-      <div class="card">
-        <img src="https://raw.githubusercontent.com/sukasu237/shaansun.github.io/main/solimages/smartcity.jpg" alt="Smart City">
-        <div class="card-icon"><i class="fa-solid fa-city"></i></div>
-        <div class="card-content"><h3>Smart City </h3><p>Develop connected urban systems for traffic, lighting, and public safety.</p></div>
+ 
+
+  <!-- 16. Predictive Maintenance -->
+  <div class="card">
+    <img src="https://raw.githubusercontent.com/sukasu237/shaansun.github.io/main/solimages/predmaintn.jpg" alt="Predictive Maintenance">
+    <div class="card-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+    <div class="card-content">
+      <h3>Predictive Maintenance</h3>
+      <p>Detect equipment issues before failure using sensor data and machine learning.</p>
+      <div class="more-content" style="display:none;">
+        <p>Vibration, temperature, and acoustic sensors feed data to predictive models that identify wear patterns. Maintenance can be scheduled proactively, minimizing downtime and maximizing asset life cycle.</p>
       </div>
+      <button class="read-more-btn" onclick="toggleContent(this)">Read More</button>
+    </div>
+  </div>
 
-        <div class="card">
-        <img src="https://raw.githubusercontent.com/sukasu237/shaansun.github.io/main/solimages/energymang.jpg" alt="Smart Energy Management">
-        <div class="card-icon"><i class="fa-solid fa-bolt"></i></div>
-        <div class="card-content"><h3>Smart Energy Management</h3><p>Monitor and optimize energy use through connected meters and analytics.</p></div>
+  
+
+  <!-- 9. Connected Vehicles (Telematics) -->
+  <div class="card">
+    <img src="https://raw.githubusercontent.com/sukasu237/shaansun.github.io/main/solimages/connvehicles.jpg" alt="Connected Vehicles">
+    <div class="card-icon"><i class="fa-solid fa-car"></i></div>
+    <div class="card-content">
+      <h3>Connected Vehicles (Telematics)</h3>
+      <p>Smart vehicle systems for fleet tracking, safety, and performance analytics.</p>
+      <div class="more-content" style="display:none;">
+        <p>Our telematics platform collects and analyzes data on driving behavior, vehicle diagnostics, and fuel consumption. Integration with GPS and IoT sensors improves routing efficiency, driver safety, and predictive maintenance scheduling.</p>
       </div>
-      
-      <div class="card">
-        <img src="https://raw.githubusercontent.com/sukasu237/shaansun.github.io/main/solimages/AssetTracking.jpg" alt="Asset Tracking">
-        <div class="card-icon"><i class="fa-solid fa-location-dot"></i></div>
-        <div class="card-content"><h3>Asset Tracking & Management</h3><p>Real-time tracking of assets to improve utilization and reduce losses.</p></div>
+      <button class="read-more-btn" onclick="toggleContent(this)">Read More</button>
+    </div>
+  </div>
+
+  <!-- 10. Smart Retail Solutions -->
+  <div class="card">
+    <img src="https://raw.githubusercontent.com/sukasu237/shaansun.github.io/main/solimages/smartretail.jpeg" alt="Smart Retail">
+    <div class="card-icon"><i class="fa-solid fa-store"></i></div>
+    <div class="card-content">
+      <h3>Smart Retail Solutions</h3>
+      <p>Enhancing retail experience through IoT-enabled inventory and customer insights.</p>
+      <div class="more-content" style="display:none;">
+        <p>IoT sensors monitor shelf stock levels, customer traffic, and in-store conditions. Smart shelves and automated checkout systems streamline operations while data analytics personalize the shopping experience for customers.</p>
       </div>
+      <button class="read-more-btn" onclick="toggleContent(this)">Read More</button>
+    </div>
+  </div>
 
-      
-      
-      <div class="card">
-        <img src="https://raw.githubusercontent.com/sukasu237/shaansun.github.io/main/solimages/smdi.jpg" alt="Smart Device Integration">
-        <div class="card-icon"><i class="fa-solid fa-plug"></i></div>
-        <div class="card-content"><h3>Smart Device Integration</h3><p>Seamlessly connect and control devices across platforms with secure IoT gateways and APIs.</p></div>
-      </div>
 
-      <div class="card">
-        <img src="https://raw.githubusercontent.com/sukasu237/shaansun.github.io/main/solimages/dataanalysis.jpg" alt="Data Analytics & Visualization">
-        <div class="card-icon"><i class="fa-solid fa-chart-line"></i></div>
-        <div class="card-content"><h3>Data Analytics & Visualization</h3><p>Turn raw data into actionable insights with real-time dashboards and predictive analytics.</p></div>
-      </div>
 
-      <!-- <div class="card">
-        <img src="https://raw.githubusercontent.com/sukasu237/shaansun.github.io/main/solimages/cloudconnect.jpg" alt="Cloud Connectivity">
-        <div class="card-icon"><i class="fa-solid fa-cloud"></i></div>
-        <div class="card-content"><h3>Cloud Connectivity</h3><p>Scalable IoT cloud storage, synchronization, and device management solutions.</p></div>
-      </div> -->
-
-      <div class="card">
-        <img src="https://raw.githubusercontent.com/sukasu237/shaansun.github.io/main/solimages/mining.jpg" alt="Mining Solutions">
-        <div class="card-icon"><i class="fa-solid fa-hard-hat"></i></div>
-        <div class="card-content">
-          <h3>Mining Solutions</h3>
-          <p>Enhance mining operations with IoT-enabled monitoring, predictive maintenance, and safety automation systems.</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="https://raw.githubusercontent.com/sukasu237/shaansun.github.io/main/solimages/edgec.jpg" alt="Edge Computing">
-        <div class="card-icon"><i class="fa-solid fa-microchip"></i></div>
-        <div class="card-content"><h3>Edge Computing</h3><p>Reduce latency and improve performance with local data processing and intelligent edge systems.</p></div>
-      </div>
-
-      <div class="card">
-        <img src="https://raw.githubusercontent.com/sukasu237/shaansun.github.io/main/solimages/security.jpg" alt="Security & Compliance">
-        <div class="card-icon"><i class="fa-solid fa-shield-halved"></i></div>
-        <div class="card-content"><h3>Security & Compliance</h3><p>End-to-end data encryption and compliance to keep your IoT ecosystem safe.</p></div>
-      </div>
-
-    
-      <div class="card">
-        <img src="https://raw.githubusercontent.com/sukasu237/shaansun.github.io/main/solimages/predmaintn.jpg" alt="Predictive Maintenance">
-        <div class="card-icon"><i class="fa-solid fa-gears"></i></div>
-        <div class="card-content"><h3>Predictive Maintenance</h3><p>Detect equipment issues early using AI and sensor data for proactive maintenance.</p></div>
-      </div>
-
-      
-
-      <div class="card">
-        <img src="https://raw.githubusercontent.com/sukasu237/shaansun.github.io/main/solimages/connvehicles.jpg" alt="Connected Vehicles">
-        <div class="card-icon"><i class="fa-solid fa-car"></i></div>
-        <div class="card-content"><h3>Connected Vehicles (Telematics)</h3><p>Enhance fleet management with real-time telemetry and driver analytics.</p></div>
-      </div>
-
-      <div class="card">
-        <img src="https://raw.githubusercontent.com/sukasu237/shaansun.github.io/main/solimages/smartretail.webp" alt="Smart Retail">
-        <div class="card-icon"><i class="fa-solid fa-store"></i></div>
-        <div class="card-content"><h3>Smart Retail Solutions</h3><p>IoT-powered inventory tracking, digital signage, and personalized shopping experiences.</p></div>
-      </div>
-
-         </section>
+ 
   </main>
 
   <footer class="footer">
